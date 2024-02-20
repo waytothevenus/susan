@@ -1,4 +1,5 @@
 // import fetch from 'node-fetch';
+
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send';
 
 const sendEmail = async ({
@@ -6,45 +7,44 @@ const sendEmail = async ({
   email,
   message,
 }) => {
-  const toEmail = process.env.RECEIVING_EMAIL || 'susan@susanmorrow.us'
-
-  console.log(`Sending to ${toEmail}`)
-  
-  const result = await fetch(SENDGRID_API, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
-    },
-    body: JSON.stringify({
+	console.log(name, email, message)
+  const body = {
       personalizations: [
         {
           to: [
             {
-              email: toEmail,
+              email: 'morrowsus@gmail.com',
             },
           ],
           subject: `👻 SusanMorrow.us Inquiry: ${name}`,
         },
       ],
       from: {
-        email: 'susan@susanmorrow.us',
+        email: 'me@lacymorrow.com',
         name: `Susan Morrow`,
       },
-      // replyTo: {
-      //   email,
-      //   name
-      // },
+      replyTo: {
+        email,
+        name
+      },
       content: [
         {
           type: 'text/html',
           value: `<p><b>${name}</b> just said:</p><p>${message}</p><p>${email}</p>`,
         },
       ],
-    }),
+    }
+
+	const data = await fetch(SENDGRID_API, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+    },
+    body: JSON.stringify(body),
   });
-  console.log(result)
-  return result
+
+	return data
 };
 
-export { sendEmail };
+export default sendEmail;

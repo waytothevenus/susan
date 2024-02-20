@@ -6,8 +6,9 @@ import BannerLanding from '../components/BannerLanding'
 
 const Landing = () => <Layout>
     <Head>
-        <title>Landing Page</title>
+        <meta name="robots" content="noindex" />
         <meta name="description" content="Landing Page" />
+        <title>Landing Page</title>
     </Head>
 
     <div>
@@ -24,8 +25,8 @@ const Landing = () => <Layout>
             </section>
             <section id="two" className="spotlights">
                 <section>
-                    <Link href="/generic">
-                        <a className="image"><img src="/images/pic08.jpg" alt="" /></a>
+                    <Link href="/generic" className="image">
+                        <img src="/images/pic08.jpg" alt="" />
                     </Link>
                     <div className="content">
                         <div className="inner">
@@ -34,14 +35,14 @@ const Landing = () => <Layout>
                             </header>
                             <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
                             <ul className="actions">
-                                <li><Link href="/generic"><a className="button">Learn more</a></Link></li>
+                                <li><Link href="/generic" className="button">Learn more</Link></li>
                             </ul>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <Link href="/generic">
-                        <a className="image"><img src="/images/pic09.jpg" alt="" /></a>
+                    <Link href="/generic" className="image">
+                        <img src="/images/pic09.jpg" alt="" />
                     </Link>
                     <div className="content">
                         <div className="inner">
@@ -50,14 +51,14 @@ const Landing = () => <Layout>
                             </header>
                             <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
                             <ul className="actions">
-                                <li><Link href="/generic"><a className="button">Learn more</a></Link></li>
+                                <li><Link href="/generic" className="button">Learn more</Link></li>
                             </ul>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <Link href="/generic">
-                        <a className="image"><img src="/images/pic10.jpg" alt="" /></a>
+                    <Link href="/generic" className="image">
+                        <img src="/images/pic10.jpg" alt="" />
                     </Link>
                     <div className="content">
                         <div className="inner">
@@ -66,7 +67,7 @@ const Landing = () => <Layout>
                             </header>
                             <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
                             <ul className="actions">
-                                <li><Link href="/generic"><a className="button">Learn more</a></Link></li>
+                                <li><Link href="/generic" className="button">Learn more</Link></li>
                             </ul>
                         </div>
                     </div>
